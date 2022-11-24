@@ -6,6 +6,7 @@
 #include "InputContainer.h"
 #include "outputContainer.h"
 #include "delete.h"
+#include "sort.h"
 using namespace std;
 
 int main(int argNum, char* argStr[])
@@ -18,7 +19,6 @@ int main(int argNum, char* argStr[])
 	}
 	ifstream inputFile(argStr[1]);
 	ofstream outputFile(argStr[2]);*/
-	
 	ifstream inputFile("input.txt");
 	ofstream outputFile("output.txt");
 	
@@ -29,6 +29,11 @@ int main(int argNum, char* argStr[])
 	
 	outputFile << "Filled container\n";
 	output(outputFile, list);
+
+	outputFile << "Sorted container\n";
+	list = sort(list);
+	output(outputFile, list);
+
 	outputFile << "Empty conteiner\n";
 	deleteContainer(list);
 	output(outputFile, list);
