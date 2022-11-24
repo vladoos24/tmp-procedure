@@ -18,7 +18,7 @@ int main(int argNum, char* argStr[])
 	}
 	ifstream inputFile(argStr[1]);
 	ofstream outputFile(argStr[2]);*/
-
+	
 	ifstream inputFile("input.txt");
 	ofstream outputFile("output.txt");
 	
